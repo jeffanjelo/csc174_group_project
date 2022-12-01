@@ -16,7 +16,7 @@ if (!$conn) {
 echo "Connected successfully";
 
 //prepare and bind new values
-$stmt = $conn->prepare("INSERT INTO USER(AID, Name) VALUES (?, ?)");
+$stmt = $conn->prepare("INSERT INTO USER(UID, Name) VALUES (?, ?)");
 
 $stmt->bind_param("is", $UID, $Name);
 
