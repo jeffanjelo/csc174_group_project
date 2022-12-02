@@ -14,6 +14,16 @@ if (!$conn) {
    die("Connection failed: " . mysqli_connect_error());
 }
 echo "Connected successfully";
+echo "<br>";
+
+$sql = "SELECT * FROM USER";
+$result = $conn->query($sql);
+
+if($result->num_rows >0){
+   while($row = $result->fetch_assoc()){
+      echo "ID: " . $row["UID"]. " - Name: ". $row["Name"]. "<br>";
+   }
+}
 
 //prepare and bind new values
 $stmt = $conn->prepare("INSERT INTO USER(UID, Name) VALUES (?, ?)");
@@ -23,7 +33,6 @@ $stmt->bind_param("is", $UID, $Name);
 $stmt->execute();
 
 $stmt->close();
-
 
 $conn->close();
 
