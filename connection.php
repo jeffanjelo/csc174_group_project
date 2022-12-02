@@ -14,7 +14,9 @@ if (!$conn) {
    die("Connection failed: " . mysqli_connect_error());
 }
 echo "Connected successfully";
-echo "<br>";
+echo "<br><br>";
+
+echo "Before Insertion of new data. <br><br>";
 
 $sql = "SELECT * FROM USER";
 $result = $conn->query($sql);
