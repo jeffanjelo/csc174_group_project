@@ -1,2 +1,2 @@
 # csc174_group_project
-This is the repository for CSC174 Deliverable 3
+This is the repository for CSC174 Deliverable 3. The code for the html is contained the index.html file. The code to test the connection to the database is contained in the connection.php file.
